@@ -1,4 +1,3 @@
-const express = require("express");
-const app = express();
+import http from "http";
 
 console.log("Server is running on port 3000");
