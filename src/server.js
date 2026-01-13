@@ -6,7 +6,8 @@ app.use(express.json());
 app.post("/products", (req, res) => {
   const { name, idade } = req.body;
 
-  return res.json({ name, idade, });
+  console.log({name, idade});
+  return res.json({ name, idade });
 });
 
 app.listen(3000, () => {
