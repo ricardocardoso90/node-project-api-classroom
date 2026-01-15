@@ -12,5 +12,5 @@ app.post("/products", middleware, (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server está rodando na porta 3000");
 });
