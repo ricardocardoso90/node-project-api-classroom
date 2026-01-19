@@ -1,7 +1,7 @@
-export async function middleware(req, res, next) {
-  if (req.method === "GET" && req.path === "/products/1") {
-    return res.status(405).json({ error: "Método não permitido" });
-  };
-
-  next();
+export async function middlewareError(req, res) {
+  return res.status(404).json({
+    method: req.method,
+    path: req.originalUrl,
+    error: "Rota não encontrada",
+  });
 };
