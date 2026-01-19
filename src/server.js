@@ -1,15 +1,11 @@
 import express from "express";
-import { middleware } from "./middlewares/middleware.js";
 
 const app = express();
 app.use(express.json());
 
-app.post("/products", middleware, (req, res) => {
-  const { name, idade } = req.body;
+const Routes = require('./routes/Routes');
 
-  console.log({ name, idade });
-  return res.json({ name, idade });
-});
+app.use('/products', Routes);
 
 app.listen(3000, () => {
   console.log("Server está rodando na porta 3000");

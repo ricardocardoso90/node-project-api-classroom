@@ -1,27 +1,7 @@
-import { middleware } from "../middlewares/middleware";
+const router = require("express").Router();
+const Controller = require("../controllers/controller");
 
-export const routes = [
-  {
-    method: "GET",
-    path: "/products",
-    middleware: [middleware],
-    controller: (req, res) => {
-      const { name, idade } = req.body;
+router.get('/products', Controller.products);
+router.post('/products', Controller.products);
 
-      console.log("Resposta GET: " + { name, idade });
-      return res.json({ name, idade });
-    }
-  },
-
-  {
-    method: "POST",
-    path: "/products",
-    middleware: [middleware],
-    controller: (req, res) => {
-      const { name, idade } = req.body;
-
-      console.log("Resposta POST: " + { name, idade });
-      return res.json({ name, idade });
-    }
-  }
-]
+module.exports = router;
