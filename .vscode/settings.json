@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    }
+  },
+  "powershell.integratedConsole.showOnStartup": false
+}
