@@ -4,5 +4,5 @@ export default class Controller {
 
   console.log({ name, idade });
   return res.json({ name, idade });
-  }
+  };
 };
